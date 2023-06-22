@@ -11,7 +11,6 @@ from rest_framework import generics
 
 class SongView(generics.ListCreateAPIView):
     serializer_class = SongSerializer
-    queryset = Song.objects.all()
     permission_classes = [IsAuthenticatedOrReadOnly]
     authentication_classes = [JWTAuthentication]
 
